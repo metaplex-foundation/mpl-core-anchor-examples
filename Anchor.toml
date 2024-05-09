@@ -5,7 +5,11 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-mpl_core_anchor_examples = "GD7rkX6ARmc4SZSVTCTURggAHXAHVEyeTG3bNtcUZZAE"
+mpl_core_anchor_wrapper = "EXMPLWxvGsyDuHMcnZHBnUN32RaoyVowkzhyXmAVxmEM"
+
+[[test.genesis]]
+address = "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d"
+program = "tests/programs/mpl_core.so"
 
 [registry]
 url = "https://api.apr.dev"

@@ -1,12 +1,12 @@
 [package]
-name = "mpl-core-anchor-examples"
+name = "mpl-core-anchor-wrapper"
 version = "0.1.0"
 description = "Created with Anchor"
 edition = "2021"
 
 [lib]
 crate-type = ["cdylib", "lib"]
-name = "mpl_core_anchor_examples"
+name = "mpl_core_anchor_wrapper"
 
 [features]
 default = []
@@ -18,3 +18,7 @@ idl-build = ["anchor-lang/idl-build"]
 
 [dependencies]
 anchor-lang = "0.30.0"
+mpl-core = { version = "0.6.1", features = ["anchor"] }
+borsh = "0.10.3"
+num-traits = "0.2.18"
+num-derive = "0.4.2"
