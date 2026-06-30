@@ -4,6 +4,9 @@ members = [
 ]
 resolver = "2"
 
+[patch.crates-io]
+kaigan = { git = "https://github.com/metaplex-foundation/kaigan.git", branch = "fix/anchor-implies-borsh-v1" }
+
 [profile.release]
 overflow-checks = true
 lto = "fat"
