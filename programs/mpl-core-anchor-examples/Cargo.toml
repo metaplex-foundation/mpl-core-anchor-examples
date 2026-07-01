@@ -1,24 +1,27 @@
 [package]
-name = "mpl-core-anchor-wrapper"
-version = "0.1.0"
 description = "Created with Anchor"
 edition = "2021"
+name = "mpl-core-anchor-wrapper"
+version = "0.1.0"
 
 [lib]
 crate-type = ["cdylib", "lib"]
 name = "mpl_core_anchor_wrapper"
 
 [features]
-default = []
 cpi = ["no-entrypoint"]
+default = []
+idl-build = ["anchor-lang/idl-build"]
 no-entrypoint = []
 no-idl = []
 no-log-ix-name = []
-idl-build = ["anchor-lang/idl-build"]
 
 [dependencies]
-anchor-lang = "0.30.0"
-mpl-core = { version = "0.6.1", features = ["anchor"] }
-borsh = "0.10.3"
-num-traits = "0.2.18"
+anchor-lang = "0.32.1"
+borsh = "1.6.1"
+mpl-core = { git = "https://github.com/metaplex-foundation/mpl-core.git", branch = "feat/anchor0-32-1", features = [
+  "anchor",
+  "anchor-0-32",
+] }
 num-derive = "0.4.2"
+num-traits = "0.2.18"
